@@ -9,7 +9,7 @@ JSBindings: [https://github.com/zynga/jsbindings/] (https://github.com/zynga/jsb
 
 But not all is magic: if you want to use pure JavaScript, every piece of native code should have his jsbinding. If you start to develop with CocosBuilder3 for creating your scenes, you will see that you cannot use some of the controls that are bundled (CCControlButton,CCScrollView,etc). This controls are cocosbuilder extensions that you have to download in order to use them in your projects. 
 
-Once you download the code, you will see that you cannot use these controls if you are using JavaScript controlled controllers. That is because the 'glue code' for this controls has not been generated. 
+Once you download the code, you cannot use these controls if you are using JavaScript controlled controllers. That is because the 'glue code' for this controls has not been generated. 
 
 In this project you will find the 'glue code' (jsbindings) for CCControl,CCControlButton,CCScrollView and CCScale9Sprite. 
 
