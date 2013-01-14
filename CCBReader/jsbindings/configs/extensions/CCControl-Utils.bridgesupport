@@ -1,0 +1,185 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct type='{_HSV=&quot;h&quot;d&quot;s&quot;d&quot;v&quot;d}' name='HSV'>
+<field type='d' name='h' declared_type='double'/>
+<field type='d' name='s' declared_type='double'/>
+<field type='d' name='v' declared_type='double'/>
+</struct>
+<struct type='{_RGBA=&quot;r&quot;d&quot;g&quot;d&quot;b&quot;d&quot;a&quot;d}' name='RGBA'>
+<field type='d' name='r' declared_type='double'/>
+<field type='d' name='g' declared_type='double'/>
+<field type='d' name='b' declared_type='double'/>
+<field type='d' name='a' declared_type='double'/>
+</struct>
+<class name='CCColourUtils'>
+<method selector='HSVfromRGB:' class_method='true'>
+<arg type='{_RGBA=dddd}' index='0' name='value' declared_type='RGBA'/>
+<retval type='{_HSV=ddd}' declared_type='HSV'/>
+</method>
+<method selector='RGBfromHSV:' class_method='true'>
+<arg type='{_HSV=ddd}' index='0' name='value' declared_type='HSV'/>
+<retval type='{_RGBA=dddd}' declared_type='RGBA'/>
+</method>
+</class>
+<class name='CCScale9Sprite'>
+<method selector='capInsets'>
+<retval type='{CGRect={CGPoint=ff}{CGSize=ff}}' declared_type='CGRect'/>
+</method>
+<method selector='color'>
+<retval type='{_ccColor3B=CCC}' declared_type='ccColor3B'/>
+</method>
+<method selector='doesOpacityModifyRGB'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='initWithFile:'>
+<arg type='@' index='0' name='file' declared_type='NSString*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithFile:capInsets:'>
+<arg type='@' index='0' name='file' declared_type='NSString*'/>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1' name='capInsets' declared_type='CGRect'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithFile:rect:'>
+<arg type='@' index='0' name='file' declared_type='NSString*'/>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1' name='rect' declared_type='CGRect'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithFile:rect:capInsets:'>
+<arg type='@' index='0' name='file' declared_type='NSString*'/>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1' name='rect' declared_type='CGRect'/>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='2' name='capInsets' declared_type='CGRect'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithSpriteFrame:'>
+<arg type='@' index='0' name='spriteFrame' declared_type='CCSpriteFrame*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithSpriteFrame:capInsets:'>
+<arg type='@' index='0' name='spriteFrame' declared_type='CCSpriteFrame*'/>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1' name='capInsets' declared_type='CGRect'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithSpriteFrameName:'>
+<arg type='@' index='0' name='spriteFrameName' declared_type='NSString*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithSpriteFrameName:capInsets:'>
+<arg type='@' index='0' name='spriteFrameName' declared_type='NSString*'/>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1' name='capInsets' declared_type='CGRect'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='insetBottom'>
+<retval type='f' declared_type='float'/>
+</method>
+<method selector='insetLeft'>
+<retval type='f' declared_type='float'/>
+</method>
+<method selector='insetRight'>
+<retval type='f' declared_type='float'/>
+</method>
+<method selector='insetTop'>
+<retval type='f' declared_type='float'/>
+</method>
+<method selector='opacity'>
+<retval type='C' declared_type='GLubyte'/>
+</method>
+<method selector='originalSize'>
+<retval type='{CGSize=ff}' declared_type='CGSize'/>
+</method>
+<method selector='preferedSize'>
+<retval type='{CGSize=ff}' declared_type='CGSize'/>
+</method>
+<method selector='resizableSpriteWithCapInsets:'>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='0' name='capInsets' declared_type='CGRect'/>
+<retval type='@' declared_type='CCScale9Sprite*'/>
+</method>
+<method selector='setCapInsets:'>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='0' name='capInsets' declared_type='CGRect'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setColor:'>
+<arg type='{_ccColor3B=CCC}' index='0' name='color' declared_type='ccColor3B'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setInsetBottom:'>
+<arg type='f' index='0' name='insetBottom' declared_type='float'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setInsetLeft:'>
+<arg type='f' index='0' name='insetLeft' declared_type='float'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setInsetRight:'>
+<arg type='f' index='0' name='insetRight' declared_type='float'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setInsetTop:'>
+<arg type='f' index='0' name='insetTop' declared_type='float'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setOpacity:'>
+<arg type='C' index='0' name='opacity' declared_type='GLubyte'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setOpacityModifyRGB:'>
+<arg type='B' index='0' name='opacityModifyRGB' declared_type='BOOL'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setPreferedSize:'>
+<arg type='{CGSize=ff}' index='0' name='preferedSize' declared_type='CGSize'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setSpriteFrame:'>
+<arg type='@' index='0' name='spriteFrame' declared_type='CCSpriteFrame*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='spriteWithFile:' class_method='true'>
+<arg type='@' index='0' name='file' declared_type='NSString*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='spriteWithFile:capInsets:' class_method='true'>
+<arg type='@' index='0' name='file' declared_type='NSString*'/>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1' name='capInsets' declared_type='CGRect'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='spriteWithFile:rect:' class_method='true'>
+<arg type='@' index='0' name='file' declared_type='NSString*'/>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1' name='rect' declared_type='CGRect'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='spriteWithFile:rect:capInsets:' class_method='true'>
+<arg type='@' index='0' name='file' declared_type='NSString*'/>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1' name='rect' declared_type='CGRect'/>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='2' name='capInsets' declared_type='CGRect'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='spriteWithSpriteFrame:' class_method='true'>
+<arg type='@' index='0' name='spriteFrame' declared_type='CCSpriteFrame*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='spriteWithSpriteFrame:capInsets:' class_method='true'>
+<arg type='@' index='0' name='spriteFrame' declared_type='CCSpriteFrame*'/>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1' name='capInsets' declared_type='CGRect'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='spriteWithSpriteFrameName:' class_method='true'>
+<arg type='@' index='0' name='spriteFrameName' declared_type='NSString*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='spriteWithSpriteFrameName:capInsets:' class_method='true'>
+<arg type='@' index='0' name='spriteFrameName' declared_type='NSString*'/>
+<arg type='{CGRect={CGPoint=ff}{CGSize=ff}}' index='1' name='capInsets' declared_type='CGRect'/>
+<retval type='@' declared_type='id'/>
+</method>
+</class>
+<class name='Utils'>
+<method selector='addSprite:toTarget:withPos:andAnchor:' class_method='true'>
+<arg type='@' index='0' name='spriteName' declared_type='NSString*'/>
+<arg type='@' index='1' name='target' declared_type='id'/>
+<arg type='{CGPoint=ff}' index='2' name='pos' declared_type='CGPoint'/>
+<arg type='{CGPoint=ff}' index='3' name='anchor' declared_type='CGPoint'/>
+<retval type='@' declared_type='CCSprite*'/>
+</method>
+</class>
+</signatures>

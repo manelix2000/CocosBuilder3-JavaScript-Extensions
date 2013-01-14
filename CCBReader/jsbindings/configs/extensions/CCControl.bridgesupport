@@ -1,0 +1,497 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum name='CCControlButtonMarginLR' value='8'/>
+<enum name='CCControlButtonMarginTB' value='2'/>
+<enum name='CCControlEventTouchCancel' value='128'/>
+<enum name='CCControlEventTouchDown' value='1'/>
+<enum name='CCControlEventTouchDragEnter' value='8'/>
+<enum name='CCControlEventTouchDragExit' value='16'/>
+<enum name='CCControlEventTouchDragInside' value='2'/>
+<enum name='CCControlEventTouchDragOutside' value='4'/>
+<enum name='CCControlEventTouchUpInside' value='32'/>
+<enum name='CCControlEventTouchUpOutside' value='64'/>
+<enum name='CCControlEventValueChanged' value='256'/>
+<enum name='CCControlStateDisabled' value='4'/>
+<enum name='CCControlStateHighlighted' value='2'/>
+<enum name='CCControlStateNormal' value='1'/>
+<enum name='CCControlStateSelected' value='8'/>
+<enum name='kCCControlStepperPartMinus' value='0'/>
+<enum name='kCCControlStepperPartNone' value='2'/>
+<enum name='kCCControlStepperPartPlus' value='1'/>
+<enum name='kControlEventTotalNumber' value='9'/>
+<class name='CCControl'>
+<method selector='addTarget:action:forControlEvents:'>
+<arg declared_type='id' type='@' index='0' name='target'/>
+<arg declared_type='SEL' type=':' index='1' name='action'/>
+<arg declared_type='CCControlEvent' type='I' index='2' name='controlEvents'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='color'>
+<retval declared_type='ccColor3B' type='{_ccColor3B=CCC}'/>
+</method>
+<method selector='defaultTouchPriority'>
+<retval declared_type='NSInteger' type='i'/>
+</method>
+<method selector='doesOpacityModifyRGB'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='eventLocation:'>
+<arg declared_type='NSEvent*' type='@' index='0' name='event'/>
+<retval declared_type='CGPoint' type='{CGPoint=ff}'/>
+</method>
+<method selector='hasVisibleParents'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isEnabled'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isHighlighted'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isMouseInside:'>
+<arg declared_type='NSEvent*' type='@' index='0' name='event'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isSelected'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='needsLayout'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='opacity'>
+<retval declared_type='GLubyte' type='C'/>
+</method>
+<method selector='removeTarget:action:forControlEvents:'>
+<arg declared_type='id' type='@' index='0' name='target'/>
+<arg declared_type='SEL' type=':' index='1' name='action'/>
+<arg declared_type='CCControlEvent' type='I' index='2' name='controlEvents'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sendActionsForControlEvents:'>
+<arg declared_type='CCControlEvent' type='I' index='0' name='controlEvents'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBlock:forControlEvents:'>
+<arg declared_type='CCControlBlock' type='@?' index='0' name='block' function_pointer='true'>
+<arg declared_type='id' type='@'/>
+<arg declared_type='CCControlEvent' type='I'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<arg declared_type='CCControlEvent' type='I' index='1' name='controlEvents'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setColor:'>
+<arg declared_type='ccColor3B' type='{_ccColor3B=CCC}' index='0' name='color'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDefaultTouchPriority:'>
+<arg declared_type='NSInteger' type='i' index='0' name='defaultTouchPriority'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setEnabled:'>
+<arg declared_type='BOOL' type='B' index='0' name='enabled'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHighlighted:'>
+<arg declared_type='BOOL' type='B' index='0' name='highlighted'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOpacity:'>
+<arg declared_type='GLubyte' type='C' index='0' name='opacity'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOpacityModifyRGB:'>
+<arg declared_type='BOOL' type='B' index='0' name='opacityModifyRGB'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSelected:'>
+<arg declared_type='BOOL' type='B' index='0' name='selected'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='state'>
+<retval declared_type='CCControlState' type='I'/>
+</method>
+</class>
+<class name='CCControlButton'>
+<method selector='backgroundSprite'>
+<retval declared_type='CCScale9Sprite*' type='@'/>
+</method>
+<method selector='backgroundSpriteForState:'>
+<arg declared_type='CCControlState' type='I' index='0' name='state'/>
+<retval declared_type='CCScale9Sprite*' type='@'/>
+</method>
+<method selector='buttonWithBackgroundSprite:' class_method='true'>
+<arg declared_type='CCScale9Sprite*' type='@' index='0' name='sprite'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='buttonWithLabel:backgroundSprite:' class_method='true'>
+<arg declared_type='CCNode*' type='@' index='0' name='label'/>
+<arg declared_type='CCScale9Sprite*' type='@' index='1' name='backgroundsprite'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='buttonWithTitle:fontName:fontSize:' class_method='true'>
+<arg declared_type='NSString*' type='@' index='0' name='title'/>
+<arg declared_type='NSString*' type='@' index='1' name='fontName'/>
+<arg declared_type='NSUInteger' type='I' index='2' name='fontsize'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='currentTitle'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='currentTitleColor'>
+<retval declared_type='ccColor3B' type='{_ccColor3B=CCC}'/>
+</method>
+<method selector='doesAdjustBackgroundImage'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithBackgroundSprite:'>
+<arg declared_type='CCScale9Sprite*' type='@' index='0' name='sprite'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithLabel:backgroundSprite:'>
+<arg declared_type='CCNode*' type='@' index='0' name='label'/>
+<arg declared_type='CCScale9Sprite*' type='@' index='1' name='backgroundsprite'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithTitle:fontName:fontSize:'>
+<arg declared_type='NSString*' type='@' index='0' name='title'/>
+<arg declared_type='NSString*' type='@' index='1' name='fontName'/>
+<arg declared_type='NSUInteger' type='I' index='2' name='fontsize'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='labelAnchorPoint'>
+<retval declared_type='CGPoint' type='{CGPoint=ff}'/>
+</method>
+<method selector='preferedSize'>
+<retval declared_type='CGSize' type='{CGSize=ff}'/>
+</method>
+<method selector='setAdjustBackgroundImage:'>
+<arg declared_type='BOOL' type='B' index='0' name='adjustBackgroundImage'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundSprite:'>
+<arg declared_type='CCScale9Sprite*' type='@' index='0' name='backgroundSprite'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundSprite:forState:'>
+<arg declared_type='CCScale9Sprite*' type='@' index='0' name='sprite'/>
+<arg declared_type='CCControlState' type='I' index='1' name='state'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBackgroundSpriteFrame:forState:'>
+<arg declared_type='CCSpriteFrame*' type='@' index='0' name='spriteFrame'/>
+<arg declared_type='CCControlState' type='I' index='1' name='state'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLabelAnchorPoint:'>
+<arg declared_type='CGPoint' type='{CGPoint=ff}' index='0' name='labelAnchorPoint'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setPreferedSize:'>
+<arg declared_type='CGSize' type='{CGSize=ff}' index='0' name='preferedSize'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitle:forState:'>
+<arg declared_type='NSString*' type='@' index='0' name='title'/>
+<arg declared_type='CCControlState' type='I' index='1' name='state'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitleBMFont:forState:'>
+<arg declared_type='NSString*' type='@' index='0' name='fntFile'/>
+<arg declared_type='CCControlState' type='I' index='1' name='state'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitleColor:forState:'>
+<arg declared_type='ccColor3B' type='{_ccColor3B=CCC}' index='0' name='color'/>
+<arg declared_type='CCControlState' type='I' index='1' name='state'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitleLabel:'>
+<arg declared_type='CCNode*' type='@' index='0' name='titleLabel'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitleLabel:forState:'>
+<arg declared_type='CCNode*' type='@' index='0' name='label'/>
+<arg declared_type='CCControlState' type='I' index='1' name='state'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitleTTF:forState:'>
+<arg declared_type='NSString*' type='@' index='0' name='fontName'/>
+<arg declared_type='CCControlState' type='I' index='1' name='state'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTitleTTFSize:forState:'>
+<arg declared_type='float' type='f' index='0' name='size'/>
+<arg declared_type='CCControlState' type='I' index='1' name='state'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setZoomOnTouchDown:'>
+<arg declared_type='BOOL' type='B' index='0' name='zoomOnTouchDown'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='titleColorForState:'>
+<arg declared_type='CCControlState' type='I' index='0' name='state'/>
+<retval declared_type='ccColor3B' type='{_ccColor3B=CCC}'/>
+</method>
+<method selector='titleForState:'>
+<arg declared_type='CCControlState' type='I' index='0' name='state'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='titleLabel'>
+<retval declared_type='CCNode*' type='@'/>
+</method>
+<method selector='titleLabelForState:'>
+<arg declared_type='CCControlState' type='I' index='0' name='state'/>
+<retval declared_type='CCNode*' type='@'/>
+</method>
+<method selector='titleTTFForState:'>
+<arg declared_type='CCControlState' type='I' index='0' name='state'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='titleTTFSizeForState:'>
+<arg declared_type='CCControlState' type='I' index='0' name='state'/>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='zoomOnTouchDown'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='CCControlColourPicker'>
+<method selector='colorPicker' class_method='true'>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='CCControlHuePicker'>
+<method selector='hue'>
+<retval declared_type='CGFloat' type='f'/>
+</method>
+<method selector='huePercentage'>
+<retval declared_type='CGFloat' type='f'/>
+</method>
+<method selector='initWithTarget:withPos:'>
+<arg declared_type='id' type='@' index='0' name='target'/>
+<arg declared_type='CGPoint' type='{CGPoint=ff}' index='1' name='pos'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setHue:'>
+<arg declared_type='CGFloat' type='f' index='0' name='hue'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setHuePercentage:'>
+<arg declared_type='CGFloat' type='f' index='0' name='huePercentage'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CCControlPotentiometer'>
+<method selector='initWithTrackSprite:progressSprite:thumbSprite:'>
+<arg declared_type='CCSprite*' type='@' index='0' name='trackSprite'/>
+<arg declared_type='CCProgressTimer*' type='@' index='1' name='progressTimer'/>
+<arg declared_type='CCSprite*' type='@' index='2' name='thumbSprite'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='maximumValue'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='minimumValue'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='potentiometerWithTrackFile:progressFile:thumbFile:' class_method='true'>
+<arg declared_type='NSString*' type='@' index='0' name='backgroundFile'/>
+<arg declared_type='NSString*' type='@' index='1' name='progressFile'/>
+<arg declared_type='NSString*' type='@' index='2' name='thumbFile'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setMaximumValue:'>
+<arg declared_type='float' type='f' index='0' name='maximumValue'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMinimumValue:'>
+<arg declared_type='float' type='f' index='0' name='minimumValue'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValue:'>
+<arg declared_type='float' type='f' index='0' name='value'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='value'>
+<retval declared_type='float' type='f'/>
+</method>
+</class>
+<class name='CCControlSaturationBrightnessPicker'>
+<method selector='brightness'>
+<retval declared_type='CGFloat' type='f'/>
+</method>
+<method selector='initWithTarget:withPos:'>
+<arg declared_type='id' type='@' index='0' name='target'/>
+<arg declared_type='CGPoint' type='{CGPoint=ff}' index='1' name='pos'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='saturation'>
+<retval declared_type='CGFloat' type='f'/>
+</method>
+<method selector='setBrightness:'>
+<arg declared_type='CGFloat' type='f' index='0' name='brightness'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setSaturation:'>
+<arg declared_type='CGFloat' type='f' index='0' name='saturation'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateDraggerWithHSV:'>
+<arg declared_type='id' type='@' index='0' name='hsv'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='updateWithHSV:'>
+<arg declared_type='id' type='@' index='0' name='hsv'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='CCControlSlider'>
+<method selector='initWithBackgroundSprite:progressSprite:thumbSprite:'>
+<arg declared_type='CCSprite*' type='@' index='0' name='backgroundSprite'/>
+<arg declared_type='CCSprite*' type='@' index='1' name='progressSprite'/>
+<arg declared_type='CCSprite*' type='@' index='2' name='thumbSprite'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='maximumValue'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='minimumValue'>
+<retval declared_type='float' type='f'/>
+</method>
+<method selector='setMaximumValue:'>
+<arg declared_type='float' type='f' index='0' name='maximumValue'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMinimumValue:'>
+<arg declared_type='float' type='f' index='0' name='minimumValue'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValue:'>
+<arg declared_type='float' type='f' index='0' name='value'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='sliderWithBackgroundFile:progressFile:thumbFile:' class_method='true'>
+<arg declared_type='NSString*' type='@' index='0' name='bgFile'/>
+<arg declared_type='NSString*' type='@' index='1' name='progressFile'/>
+<arg declared_type='NSString*' type='@' index='2' name='thumbFile'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='sliderWithBackgroundSprite:progressSprite:thumbSprite:' class_method='true'>
+<arg declared_type='CCSprite*' type='@' index='0' name='backgroundSprite'/>
+<arg declared_type='CCSprite*' type='@' index='1' name='pogressSprite'/>
+<arg declared_type='CCSprite*' type='@' index='2' name='thumbSprite'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='value'>
+<retval declared_type='float' type='f'/>
+</method>
+</class>
+<class name='CCControlStepper'>
+<method selector='autorepeat'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithMinusSprite:plusSprite:'>
+<arg declared_type='CCSprite*' type='@' index='0' name='minusSprite'/>
+<arg declared_type='CCSprite*' type='@' index='1' name='plusSprite'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='isContinuous'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='maximumValue'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='minimumValue'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='setAutorepeat:'>
+<arg declared_type='BOOL' type='B' index='0' name='autorepeat'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setContinuous:'>
+<arg declared_type='BOOL' type='B' index='0' name='continuous'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMaximumValue:'>
+<arg declared_type='double' type='d' index='0' name='maximumValue'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMinimumValue:'>
+<arg declared_type='double' type='d' index='0' name='minimumValue'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setStepValue:'>
+<arg declared_type='double' type='d' index='0' name='stepValue'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValue:'>
+<arg declared_type='double' type='d' index='0' name='value'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setWraps:'>
+<arg declared_type='BOOL' type='B' index='0' name='wraps'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='stepValue'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='stepperWithMinusSprite:plusSprite:' class_method='true'>
+<arg declared_type='CCSprite*' type='@' index='0' name='minusSprite'/>
+<arg declared_type='CCSprite*' type='@' index='1' name='plusSprite'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='value'>
+<retval declared_type='double' type='d'/>
+</method>
+<method selector='wraps'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+</class>
+<class name='CCControlSwitch'>
+<method selector='initWithMaskSprite:onSprite:offSprite:thumbSprite:'>
+<arg declared_type='CCSprite*' type='@' index='0' name='maskSprite'/>
+<arg declared_type='CCSprite*' type='@' index='1' name='onSprite'/>
+<arg declared_type='CCSprite*' type='@' index='2' name='offSprite'/>
+<arg declared_type='CCSprite*' type='@' index='3' name='thumbSprite'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithMaskSprite:onSprite:offSprite:thumbSprite:onLabel:offLabel:'>
+<arg declared_type='CCSprite*' type='@' index='0' name='maskSprite'/>
+<arg declared_type='CCSprite*' type='@' index='1' name='onSprite'/>
+<arg declared_type='CCSprite*' type='@' index='2' name='offSprite'/>
+<arg declared_type='CCSprite*' type='@' index='3' name='thumbSprite'/>
+<arg declared_type='CCNode*' type='@' index='4' name='onLabel'/>
+<arg declared_type='CCNode*' type='@' index='5' name='offLabel'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='isOn'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='setOn:'>
+<arg declared_type='BOOL' type='B' index='0' name='on'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setOn:animated:'>
+<arg declared_type='BOOL' type='B' index='0' name='isOn'/>
+<arg declared_type='BOOL' type='B' index='1' name='animated'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='switchWithMaskSprite:onSprite:offSprite:thumbSprite:' class_method='true'>
+<arg declared_type='CCSprite*' type='@' index='0' name='maskSprite'/>
+<arg declared_type='CCSprite*' type='@' index='1' name='onSprite'/>
+<arg declared_type='CCSprite*' type='@' index='2' name='offSprite'/>
+<arg declared_type='CCSprite*' type='@' index='3' name='thumbSprite'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='switchWithMaskSprite:onSprite:offSprite:thumbSprite:onLabel:offLabel:' class_method='true'>
+<arg declared_type='CCSprite*' type='@' index='0' name='maskSprite'/>
+<arg declared_type='CCSprite*' type='@' index='1' name='onSprite'/>
+<arg declared_type='CCSprite*' type='@' index='2' name='offSprite'/>
+<arg declared_type='CCSprite*' type='@' index='3' name='thumbSprite'/>
+<arg declared_type='CCNode*' type='@' index='4' name='onLabel'/>
+<arg declared_type='CCNode*' type='@' index='5' name='offLabel'/>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+</signatures>
